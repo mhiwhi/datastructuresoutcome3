@@ -2,26 +2,63 @@
 //
 
 #include <iostream>
-#include "MyLinkedStack.h"
+#include <string>
+#include "ExtensionMap.h"
 
-void linkedstackdriver() {
-    MyLinkedStack astack;
-    std::cout << "testing Stack" << std::endl;
-    std::cout << "testing is empty " << (astack.isEmpty() ? "true" : "false") << std::endl;
+// Helper functions for testing
+// add and remove kv pairs from the map with "user-friendly" messages
+void mapAddRemoveTest(ExtensionMap& e) {
+    e.addEntry(".txt", "Notepad++");
+    std::cout << e.getMessage() << std::endl;
 
-    for (int i = 1; i < 6; i++) {
-        astack.push(i);
-    }
+    e.addEntry(".html", "Mozilla Firefox");
+    std::cout << e.getMessage() << std::endl;
 
-    std::cout << "num values in stack: " << astack.size() << std::endl;
-    astack.display();
-    std::cout << "popping value " << astack.pop() << std::endl;
-    std::cout << "value 5 should have been removed" << std::endl;
-    astack.display();
+    e.addEntry(".png", "Paint");
+    std::cout << e.getMessage() << std::endl;
+
+    e.addEntry(".pdf", "Adobe Acrobat Reader");
+    std::cout << e.getMessage() << std::endl;
+
+    e.removeEntry(".png");
+    std::cout << e.getMessage() << std::endl;
+
+    e.removeEntry(".cpp");
+    std::cout << e.getMessage() << std::endl;
 }
 
+// test whether certain keys exist in the map
+void mapKVexistsTest(ExtensionMap& e) {
+    std::string testKeys[] = { ".docx", ".html", ".txt", ".cpp" };
+
+    for (const std::string& s : testKeys) {
+        std::string result = e.getEntry(s);
+        if (result.empty()) {
+            std::cout << s << " -> " << e.getMessage() << std::endl;
+        }
+        else {
+            std::cout << s << " -> " << result << std::endl;
+        }
+    }
+}
+
+// Main function for testing
 int main() {
-    linkedstackdriver();
+    ExtensionMap em;
+
+    std::cout << "Empty map: " << em.toString() << std::endl;
+    std::cout << "..." << std::endl;
+
+    mapAddRemoveTest(em);
+
+    std::cout << "..." << std::endl;
+    std::cout << "Map contents: " << em.toString() << std::endl;
+
+    std::cout << "..." << std::endl;
+    mapKVexistsTest(em);
+
+    std::cout << "..." << std::endl;
+
     return 0;
 }
 

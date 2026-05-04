@@ -125,8 +125,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="datastructuresoutcome3.cpp" />
+    <ClCompile Include="TestProgram.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExtensionMap.h" />
     <ClInclude Include="IntArrayList.h" />
     <ClInclude Include="IntLinkedList.h" />
     <ClInclude Include="MyLinkedStack.h" />

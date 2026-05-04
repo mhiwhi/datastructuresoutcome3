@@ -18,6 +18,9 @@
     <ClCompile Include="datastructuresoutcome3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stackADT.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyLinkedStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtensionMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
