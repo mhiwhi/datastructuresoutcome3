@@ -32,5 +32,11 @@
     <ClInclude Include="MyStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IntLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyLinkedStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,10 +2,10 @@
 //
 
 #include <iostream>
-#include "MyStack.h"
+#include "MyLinkedStack.h"
 
-void stackdriver() {
-    MyStack astack;
+void linkedstackdriver() {
+    MyLinkedStack astack;
     std::cout << "testing Stack" << std::endl;
     std::cout << "testing is empty " << (astack.isEmpty() ? "true" : "false") << std::endl;
 
@@ -21,7 +21,7 @@ void stackdriver() {
 }
 
 int main() {
-    stackdriver();
+    linkedstackdriver();
     return 0;
 }
 

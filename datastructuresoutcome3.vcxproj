@@ -128,6 +128,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntArrayList.h" />
+    <ClInclude Include="IntLinkedList.h" />
+    <ClInclude Include="MyLinkedStack.h" />
     <ClInclude Include="MyStack.h" />
     <ClInclude Include="setADT.h" />
     <ClInclude Include="stackADT.h" />
