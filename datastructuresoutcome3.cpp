@@ -2,10 +2,27 @@
 //
 
 #include <iostream>
+#include "MyStack.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+void stackdriver() {
+    MyStack astack;
+    std::cout << "testing Stack" << std::endl;
+    std::cout << "testing is empty " << (astack.isEmpty() ? "true" : "false") << std::endl;
+
+    for (int i = 1; i < 6; i++) {
+        astack.push(i);
+    }
+
+    std::cout << "num values in stack: " << astack.size() << std::endl;
+    astack.display();
+    std::cout << "popping value " << astack.pop() << std::endl;
+    std::cout << "value 5 should have been removed" << std::endl;
+    astack.display();
+}
+
+int main() {
+    stackdriver();
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

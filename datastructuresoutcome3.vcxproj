@@ -126,6 +126,12 @@
   <ItemGroup>
     <ClCompile Include="datastructuresoutcome3.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IntArrayList.h" />
+    <ClInclude Include="MyStack.h" />
+    <ClInclude Include="setADT.h" />
+    <ClInclude Include="stackADT.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
